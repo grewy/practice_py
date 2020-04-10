@@ -1,0 +1,16 @@
+
+a tree can be thought of as a connected acyclic graph with N nodes and N-1 edges.
+Any two vertices are connected by exactly one path.
+
+there are 6 possible DFS traversals for binary trees:-
+
+1. left, right, root ( Postorder) ~ 4. right, left, root
+2. left, root, right ( Inorder) ~ 5. right, root, left
+3. root, left, right ( Preorder) ~ 6. root, right, left
+
+And there is one BFS which is the level order traversal ( can be done using queue). Let us analyze the DFS pattern using a "stack".
+
+BFS --> Queues
+DFS --> stack
+
+
