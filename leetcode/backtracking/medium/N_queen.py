@@ -36,6 +36,7 @@ def solveNQUtil(board, col):
         board[i][col] = 0
     return False
 
+
 ##########
 def solveNQ():
     board = [[0, 0, 0, 0],
