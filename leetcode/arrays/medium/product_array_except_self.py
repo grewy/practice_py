@@ -1,5 +1,4 @@
-class Solution(object):
-    def productExceptSelf(self, nums):
+def productExceptSelf(nums):
         """
         :type nums: List[int]
         :rtype: List[int]
@@ -17,3 +16,5 @@ class Solution(object):
             rev *= nums[i]
 
         return ans
+
+print productExceptSelf([1,2,3,4,5,6,7,8,9])

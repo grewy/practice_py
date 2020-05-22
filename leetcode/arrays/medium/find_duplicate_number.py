@@ -1,5 +1,4 @@
-class Solution(object):
-    def findDuplicate(self, nums):
+def findDuplicate(nums):
         """
         :type nums: List[int]
         :rtype: int
@@ -21,3 +20,5 @@ class Solution(object):
             p2 = nums[p2]
 
         return p1
+
+print findDuplicate([1,3,3,4,5,6,2])
