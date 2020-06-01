@@ -1,5 +1,5 @@
 """
-Swap elements across diagonal and then across horizonatl/rows swap
+https://www.geeksforgeeks.org/inplace-rotate-square-matrix-by-90-degrees/
 """
 
 class Solution(object):
@@ -8,13 +8,15 @@ class Solution(object):
         :type matrix: List[List[int]]
         :rtype: None Do not return anything, modify matrix in-place instead.
         """
-        length = len(matrix[0])
+        n = len(matrix)
 
-        for i in range(length-1):
-            for j in range(length-i):
-                matrix[i][j], matrix[length-1-j][length-1-i] = matrix[length-1-j][length-1-i], matrix[i][j]
+        for i in range(0, n//2):
+            for j in range(i, n-i-1):
+                tmp = matrix[n-1-j][i]
+                matrix[n-1-j][i] = matrix[n-1-i][n-1-j]
+                matrix[n-1-i][n-1-j] = matrix[j][n-1-i]
+                matrix[j][n-1-i] = matrix[i][j]
+                matrix[i][j] = tmp
 
-        for i in range(length/2):
-            for j in range(length):
-                matrix[i][j], matrix[length-i-1][j] = matrix[length-i-1][j], matrix[i][j]
+
 
