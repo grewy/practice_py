@@ -1,3 +1,4 @@
+"""
 class Solution(object):
     def letterCasePermutation(self, S):
         """
@@ -19,3 +20,26 @@ class Solution(object):
 
 S="a1b2"
 print Solution().letterCasePermutation(S)
+"""
+
+class Solution(object):
+    def letterCasePermutation(self, S):
+        """
+        :type S: str
+        :rtype: List[str]
+        """
+        digits = {str(x) for x in range(10)}
+        A = ['']
+        for c in S:
+            B = []
+            if c in digits:
+                for a in A:
+                    B.append(a+c)
+            else:
+                for a in A:
+                    B.append(a+c.lower())
+                    B.append(a+c.upper())
+            A=B
+
+        return A
+
