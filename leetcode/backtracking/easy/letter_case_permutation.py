@@ -21,6 +21,7 @@ class Solution(object):
 S="a1b2"
 print Solution().letterCasePermutation(S)
 """
+"""
 
 class Solution(object):
     def letterCasePermutation(self, S):
